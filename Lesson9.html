@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>
+
+  </h2>
+
+  <form action="weather.php" name="weather" id="weather-form">
+    <input type="text" name="city" id="city-name" />
+
+    <input type="submit" value="Search" id="search-city" />
+  </form>
+
+  <script>
+    //create  a function that will be called when the submit event is handled
+    function searchCity(event){
+      //prevent the default behavior of the form
+      event.preventDefault(); 
+      //select the text input element
+
+      let cityName = document.querySelector("#city-name"); 
+      //display the value entered on the text input. 
+      //alert(cityName.value); 
+
+      let displayvalue = document.querySelector("h2") ; 
+      
+      if(cityName.value){
+        displayvalue.innerHTML = `searching for ${cityName.value}....`;
+      }else{
+        alert("enter a city name"); 
+        displayvalue.innerHTML = null;
+      }
+      
+    }
+
+    //select the form and add an event to it. This is to make sure we communicate with the form and have control over it. 
+    let form = document.querySelector("#weather-form"); 
+
+    form.addEventListener("submit", searchCity); 
+
+  </script>
+</body>
+</html>

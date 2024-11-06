@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    function isWindy(windspeed){
+
+      if(windspeed > 5){
+       // alert(`it is windy with a speed of ${windspeed} knots`); 
+       return true; 
+      }
+      else{
+       // alert(`it is not windy. the current speed is ${windspeed} knots.`); 
+        return false
+      }
+    }
+
+//    let currentwindspeed = prompt("What is the current wind speed in your area? "); 
+    let currentwindspeedone = prompt("What is the current wind speed in your area? "); 
+   // isWindy(currentwindspeed);
+    alert(isWindy(currentwindspeedone)); 
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" id="events-link">
+      ⌨️ JS EVENTS
+    </a>
+     
+  </h1>
+
+  <div>
+    <a href="#" id="follow">
+      follow
+    </a>
+  </div>
+  <script>
+
+    function stopClick(result){
+      event.preventDefault(); 
+      //let quiz = prompt("Why would you like to learn JS? ")
+     // alert(quiz); 
+
+    }
+
+    function changefollow(event){
+      event.preventDefault(); 
+
+      event.target.innerHTML = "<b>following</b>" ; 
+
+     // let link = document.querySelector("#follow"); 
+      //link.innerHTML = "<b>following</b>"; 
+    }
+
+
+    let jslink = document.querySelector("#events-link"); 
+
+    jslink.addEventListener("click", stopClick) ; 
+
+    let followlink = document.querySelector("#follow"); 
+
+    followlink.addEventListener("click", changefollow); 
+
+  </script>
+</body>
+</html>
